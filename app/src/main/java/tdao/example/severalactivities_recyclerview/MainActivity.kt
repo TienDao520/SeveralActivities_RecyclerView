@@ -56,7 +56,15 @@ class MainActivity : AppCompatActivity() {
         textViewName.text = userName
     }
 
+    /**Task2-5: Add value and recyclerAdapter.notifyDataSetChanged() */
+    fun onClickAddName(view: View) {
+        names.add(textViewName.text.toString())
+        println(names)
+        // tell the recyclerAdapter that you changed the dataset
+        recyclerAdapter.notifyDataSetChanged()
+    }
+
     fun onClickSaveJson(view: View) {}
-    fun onClickAddName(view: View) {}
+
 
 }
