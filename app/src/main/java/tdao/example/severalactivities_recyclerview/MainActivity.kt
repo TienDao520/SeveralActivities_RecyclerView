@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        textViewName = findViewById(R.id.textViewRecyclerItemName)
     }
 
     /**Task1-1: Launch name activity */
@@ -35,5 +36,8 @@ class MainActivity : AppCompatActivity() {
         /**Task1-4: Launch userName to textViewName */
         textViewName.text = userName
     }
+
+    fun onClickSaveJson(view: View) {}
+    fun onClickAddName(view: View) {}
 
 }

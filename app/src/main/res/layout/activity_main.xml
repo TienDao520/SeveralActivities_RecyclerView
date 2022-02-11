@@ -31,7 +31,7 @@
 
         <Button
             android:id="@+id/buttonName"
-            android:layout_width="60dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClickEnterName"
@@ -48,19 +48,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
-        <TextView
+        <EditText
             android:id="@+id/editTextJsonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClickSaveJson"
             android:text="@string/save_json" />
+
     </LinearLayout>
 
     <Button
