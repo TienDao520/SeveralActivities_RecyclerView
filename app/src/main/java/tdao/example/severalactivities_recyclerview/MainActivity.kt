@@ -54,6 +54,12 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         /**Task1-4: Launch userName to textViewName */
         textViewName.text = userName
+        /**Task3-2: getSharedPreferences when onResume()*/
+        val prefsEditor = getSharedPreferences("SharedPref",Context.MODE_PRIVATE)
+        var et:EditText = findViewById(R.id.editTextJsonName)
+        //If no written SharedPreferences default value is empty
+        et.setText(prefsEditor.getString("json_name", ""))
+
     }
 
     /**Task2-5: Add value and recyclerAdapter.notifyDataSetChanged() */
