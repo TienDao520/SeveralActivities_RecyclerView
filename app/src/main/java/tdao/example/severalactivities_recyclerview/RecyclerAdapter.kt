@@ -18,11 +18,15 @@ class RecyclerAdapter(private val dataSet: MutableList<Person>) :
      * (custom ViewHolder).
      */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        /**Task7-1: New textViewName*/
         val textView: TextView
+        val textViewName: TextView
 
         init {
             // Define click listener for the ViewHolder's View.
             textView = view.findViewById(R.id.textViewRecyclerItem)
+            textViewName = view.findViewById(R.id.textViewRecyclerItemName)
+
         }
     }
 
