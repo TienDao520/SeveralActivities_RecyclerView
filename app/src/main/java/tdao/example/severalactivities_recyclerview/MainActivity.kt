@@ -69,7 +69,9 @@ class MainActivity : AppCompatActivity() {
     /**Task2-5: Add value and recyclerAdapter.notifyDataSetChanged() */
     fun onClickAddName(view: View) {
         names.add(textViewName.text.toString())
-
+        /**Task4-5: Add value with MutableList<Person> dataSet  */
+        people.add(Person(order++, textViewName.text.toString()))
+        println(people)
         println(names)
         // tell the recyclerAdapter that you changed the dataset
         recyclerAdapter.notifyDataSetChanged()
