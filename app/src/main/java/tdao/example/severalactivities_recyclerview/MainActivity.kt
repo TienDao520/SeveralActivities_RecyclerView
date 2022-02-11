@@ -79,6 +79,17 @@ class MainActivity : AppCompatActivity() {
         println(names)
         // tell the recyclerAdapter that you changed the dataset
         recyclerAdapter.notifyDataSetChanged()
+
+        /**Task6 Debug: Technique if the recyclerView doesn't seem to want to refresh*/
+        // for demonstration, to have the recyclerView show a new list completely
+        var teachers:MutableList<Person> = mutableListOf<Person>()
+        teachers.add(Person(1,"Lianne"))
+        teachers.add(Person(2,"Andrea"))
+        teachers.add(Person(3,"Evan"))
+        teachers.add(Person(4,"Matt"))
+        // use this technique if the recyclerView doesn't seem to want to refresh
+        recyclerView.adapter = RecyclerAdapter(teachers)
+        recyclerAdapter.notifyDataSetChanged()
     }
 
     /**Task3-1:
