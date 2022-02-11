@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     lateinit var textViewName: TextView
+    /**Task2-2: Add RecyclerAdapter */
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var recyclerAdapter: RecyclerAdapter
+    private lateinit var viewManager: RecyclerView.LayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

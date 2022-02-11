@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.32407407407407407" />
         <entry key="app/src/main/res/layout/activity_name.xml" value="0.32382246376811596" />
+        <entry key="app/src/main/res/layout/recycler_item_layout.xml" value="0.11820652173913043" />
       </map>
     </option>
   </component>
