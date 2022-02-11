@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
 import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStreamWriter
@@ -102,7 +103,24 @@ class MainActivity : AppCompatActivity() {
         // reset the shared prefs to default
     }
 
-    fun onClickSaveJson(view: View) {}
+    /**Task5-2: Save data to json file*/
+    fun onClickSaveJson(view: View) {
+        try {
+            // to save to JSON file "test.json" in data/data/packagename/File
+            var editText:EditText = findViewById(R.id.editTextJsonName)
+            //Get json file name from the editText
+            val ofile: FileOutputStream = openFileOutput(editText.text.toString(), MODE_PRIVATE)
+            val osw = OutputStreamWriter(ofile)
+            var jsonList = Gson().toJson(people)
+            for(person in jsonList) {
+                osw.write(person.toString())
+            }
+            osw.flush()
+            osw.close()
+        } catch (ioe: IOException) {
+            ioe.printStackTrace()
+        }
+    }
 
 
 }
