@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Week4 Putting It Together</string>
+    <string name="name">Name:</string>
+    <string name="enter">Enter Name</string>
+    <string name="save_json">Save to JSON</string>
+    <string name="add_recycler">Add Name to RecyclerView</string>
+    <string name="save_name">Save Name</string>
+</resources>
