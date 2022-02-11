@@ -82,6 +82,16 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
     }
 
+    /**Task3-3: reset the shared prefs to default onDestroy()*/
+    override fun onDestroy() {
+        val prefsEditor = getSharedPreferences("SharedPref", Context.MODE_PRIVATE).edit()
+        var et:EditText = findViewById(R.id.editTextJsonName)
+        prefsEditor.putString("json_name", "")
+        prefsEditor.apply()
+        super.onDestroy()
+        // reset the shared prefs to default
+    }
+
     fun onClickSaveJson(view: View) {}
 
 
