@@ -6,6 +6,14 @@ import android.os.Bundle
 import android.view.View
 
 class MainActivity : AppCompatActivity() {
+
+
+    // companion object
+    companion object MainActivityData {
+        /**Task1-2: Create userName inside companion object */
+        var userName:String = ""
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
