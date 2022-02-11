@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 //class RecyclerAdapter(private val dataSet: MutableList<String>) :
 /**Task2-1: Add RecyclerAdapter */
 class RecyclerAdapter(private val dataSet: MutableList<String>) :
+
     RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     /**

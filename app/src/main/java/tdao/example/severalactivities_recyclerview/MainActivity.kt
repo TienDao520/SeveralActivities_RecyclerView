@@ -18,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         var userName:String = ""
         /**Task2-4: Create MutableList of Name */
         var names:MutableList<String> = mutableListOf<String>()
+        /**Task4-2: Create people MultableList from dataClass person */
+        var people:MutableList<Person> = mutableListOf<Person>()
+        var order:Int = 1;
     }
 
     lateinit var textViewName: TextView
@@ -35,7 +38,8 @@ class MainActivity : AppCompatActivity() {
         // setting the recyclerView up
         // setting up the recyclerView
         viewManager = LinearLayoutManager(this)
-        recyclerAdapter = RecyclerAdapter(names)  // pass in data to be displayed
+        /**Task4-3: Pass people MultableList to recyclerAdapter */
+        recyclerAdapter = RecyclerAdapter(people)  // pass in data to be displayed
         //       recyclerAdapter = RecyclerAdapter(names)  // pass in data to be displayed
         recyclerView = findViewById<RecyclerView>(R.id.recyclerView).apply{
             setHasFixedSize(true)
