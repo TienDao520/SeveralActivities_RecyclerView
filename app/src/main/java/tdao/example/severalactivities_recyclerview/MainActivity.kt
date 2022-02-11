@@ -64,6 +64,18 @@ class MainActivity : AppCompatActivity() {
         recyclerAdapter.notifyDataSetChanged()
     }
 
+    /**Task3-1:
+     * write data to shared pref onPause()
+     * when application goes into background and delete the data if the system kills the app.*/
+    override fun onPause() {
+        // Save current state to the shared pref
+        val prefsEditor = getSharedPreferences("SharedPref", Context.MODE_PRIVATE).edit()
+        var et:EditText = findViewById(R.id.editTextJsonName)
+        prefsEditor.putString("json_name", et.text.toString())
+        prefsEditor.apply()
+        super.onPause()
+    }
+
     fun onClickSaveJson(view: View) {}
 
 
