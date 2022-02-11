@@ -49,7 +49,9 @@ class RecyclerAdapter(private val dataSet: MutableList<Person>) :
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.textView.text = dataSet[position].toString();
+        /**Task7-2: Replace the contents of the viewHolder*/
+        viewHolder.textView.text = dataSet[position].order.toString();
+        viewHolder.textViewName.text = dataSet[position].name;
 
     }
 
