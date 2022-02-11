@@ -8,8 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 //class RecyclerAdapter(private val dataSet: MutableList<String>) :
 /**Task2-1: Add RecyclerAdapter */
-class RecyclerAdapter(private val dataSet: MutableList<String>) :
-
+//class RecyclerAdapter(private val dataSet: MutableList<String>) :
+/**Task4-4: Add RecyclerAdapter with MutableList<Person> dataSet  */
+class RecyclerAdapter(private val dataSet: MutableList<Person>) :
     RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     /**
@@ -44,7 +45,8 @@ class RecyclerAdapter(private val dataSet: MutableList<String>) :
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.textView.text = dataSet[position]
+        viewHolder.textView.text = dataSet[position].toString();
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)
