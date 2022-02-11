@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     companion object MainActivityData {
         /**Task1-2: Create userName inside companion object */
         var userName:String = ""
+        /**Task2-4: Create MutableList of Name */
+        var names:MutableList<String> = mutableListOf<String>()
     }
 
     lateinit var textViewName: TextView
@@ -27,6 +30,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         textViewName = findViewById(R.id.textViewRecyclerItemName)
+
+        /**Task2-3: Setting the recyclerView up */
+        // setting the recyclerView up
+        // setting up the recyclerView
+        viewManager = LinearLayoutManager(this)
+        recyclerAdapter = RecyclerAdapter(names)  // pass in data to be displayed
+        //       recyclerAdapter = RecyclerAdapter(names)  // pass in data to be displayed
+        recyclerView = findViewById<RecyclerView>(R.id.recyclerView).apply{
+            setHasFixedSize(true)
+            layoutManager = viewManager
+            adapter = recyclerAdapter  }
     }
 
     /**Task1-1: Launch name activity */
